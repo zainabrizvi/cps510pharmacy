@@ -7,7 +7,6 @@ development:
   <<: *default
   database: cps510pharmacy_development
 
-
 test:
   <<: *default
   database: cps510pharmacy_test
