@@ -9,18 +9,9 @@ default: &default
   pool: 5
   timeout: 5000
 
-# development:
-#   <<: *default
-#   database: db/development.sqlite3
-
 development:
-  adapter: oracle_enhanced
-  database: "(DESCRIPTION=
-    (ADDRESS_LIST=(ADDRESS=(PROTOCOL=tcp)(HOST=127.0.0.1)(PORT=1521)))
-    (CONNECT_DATA=(SID=orcl))
-  )"
-  username: <%= ENV['DB_USERNAME'] %>
-  password: <%= ENV['DB_PASSWORD'] %>
+  <<: *default
+  database: db/development.sqlite3
 
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".
