@@ -21,6 +21,6 @@ PID=`pgrep -f "${SSH_CMD}"`
 if [ $PID ] ; then
     echo $0: There is already a tunnel running on ${PID}.
 else
-    echo $0 Launching a new tunnel...
+    echo $0: Launching a new tunnel...
     $SSH_CMD
 fi
